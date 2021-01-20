@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import random
 
 
@@ -63,19 +61,20 @@ def is_no(one_more_input):
         return True
     return False
 
-
+                
 def main():
     print("Play Baseball")
     random_number = str(get_not_duplicated_three_digit_number())
     print("Random Number is : ", random_number)
-        
+
+    # user_input_number = 999
     flag = True
     while flag:
         user_input_number = input('Input guess number: ')
         if user_input_number == '0': 
             break
         elif not(is_validated_number(user_input_number)):
-            print('Wrong Input, Input again') 
+            print('Wrong Input, Input again') #continue
         else:
             strikes, balls = get_strikes_or_ball(user_input_number, random_number)
             print(f'Strikes : {strikes} , Balls : {balls}')
@@ -97,5 +96,64 @@ def main():
     print("End of the Game")
 
 
+# def is_win(random_number):
+#     strikes = -1
+#     while strikes < 3:
+#         user_input_number = input('Input guess number: ')
+#         if user_input_number == '0': break
+#         elif not(is_validated_number(user_input_number)):
+#             print('Wrong Input, Input again'); continue    
+        
+#         strikes, balls = get_strikes_or_ball(user_input_number, random_number)
+#         print(f'Strikes : {strikes} , Balls : {balls}')
+#     # result = False if strikes == -1 else True
+#     return False if strikes == -1 else True
+
+
+# def main():
+#     print("Play Baseball")
+#     # user_input = 999
+#     random_number = str(get_not_duplicated_three_digit_number())
+#     print("Random Number is : ", random_number)
+            
+    # while is_win(random_number) and restart > 0:
+    #     one_more_input = input('You win, one more(Y/N) ?')
+    #     if one_more_input == '0' or is_no(one_more_input): break
+    #     elif is_yes(one_more_input):
+    #         random_number = str(get_not_duplicated_three_digit_number())
+    #         print("Random Number is : ", random_number)
+    #         restart = 1
+    #     else:
+    #         print('Wrong Input, Input again'); continue
+        
+    # print("Thank you for using this program")
+    # print("End of the Game")
+
+
 if __name__ == "__main__":
     main()
+    
+    # strikes = -1
+    # while strikes < 3:
+    #     user_input_number = input('Input guess number: ')
+    #     if user_input_number == '0': break
+    #     elif not(is_validated_number(user_input_number)):
+    #         print('Wrong Input, Input again'); continue
+        
+    #     # Game start
+    #     strikes, balls = get_strikes_or_ball(user_input_number, random_number)
+    #     print(f'Strikes : {strikes} , Balls : {balls}')
+    # else:
+        # while restart < 1:
+        #     one_more_input = input('You win, one more(Y/N)?')
+        #     if one_more_input == '0' or is_no(one_more_input):
+        #         break   # End the game: '0','n','no'
+        #     elif is_yes(one_more_input):
+        #         restart, strikes = 1, -1 
+        #     else:
+        #         print('Wrong Input, Input again')
+        
+    
+            
+    
+        

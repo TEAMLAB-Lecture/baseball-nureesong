@@ -1,7 +1,8 @@
 # -*- coding: utf8 -*-
 
 import unittest
-import baseball_game as bg
+# import baseball_game as bg
+import HW_test as bg
 
 from mock import patch
 from io import StringIO
@@ -231,3 +232,5 @@ class TestBaseballGame(unittest.TestCase):
                     ball += 1
         result = [strikes, ball]
         return result
+
+unittest.main()
